@@ -82,7 +82,7 @@ lib1g-dev
 ogg-devel libtiff-devel libtool libvorbis-devel make ncurses-devel nmap openssl openssl-devel openssl-devel perl patch unixODBC unixODBC-devel unzip wget zip
  zlib zlib-devel
             yum -y install git
-            yum -y install sqlite-devel pcre-devel speex-devel ldns-devel libedit-devel libtool zlib-devel 
+            yum -y install sqlite-devel pcre-devel speex-devel ldns-devel libedit-devel libtool zlib-devel openssl-devel
             cd $FS_BASE_PATH
             wget http://mirror01.idc.hinet.net/EPEL/6/x86_64/epel-release-6-8.noarch.rpm
             rpm -ivh $FS_BASE_PATH/epel-release-6-8.noarch.rpm
