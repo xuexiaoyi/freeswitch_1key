@@ -17,8 +17,7 @@
 # To download and run the script on your server :
 #
 # >> Install with Master script :
-# cd /usr/src/ ; rm install-newfies.sh ; wget --no-check-certificate https://raw.github.com/Star2Billing/newfies-dialer/master/install/install-newfies.sh ; c
-hmod +x install-newfies.sh ; ./install-newfies.sh
+# cd /usr/src/ ; rm install-newfies.sh ; wget --no-check-certificate https://raw.github.com/Star2Billing/newfies-dialer/master/install/install-newfies.sh ; chmod +x install-newfies.sh ; ./install-newfies.sh
 #
 # >> Install with develop script :
 # cd /usr/src/ ; rm install-newfies.sh ; wget --no-check-certificate https://raw.github.com/Star2Billing/newfies-dialer/develop/install/install-newfies.sh ; 
@@ -60,8 +59,7 @@ func_identify_os() {
         fi
     elif [ -f /etc/redhat-release ] ; then
         DIST='CENTOS'
-        if [ "$(awk '{print $3}' /etc/redhat-release)" != "6.2" ] && [ "$(awk '{print $3}' /etc/redhat-release)" != "6.3" ] && [ "$(awk '{print $3}' /etc/red
-hat-release)" != "6.4" ] && [ "$(awk '{print $3}' /etc/redhat-release)" != "6.5" ]; then
+        if [ "$(awk '{print $3}' /etc/redhat-release)" != "6.2" ] && [ "$(awk '{print $3}' /etc/redhat-release)" != "6.3" ] && [ "$(awk '{print $3}' /etc/redhat-release)" != "6.4" ] && [ "$(awk '{print $3}' /etc/redhat-release)" != "6.5" ]; then
             echo "This script is only intended to run on Debian 7.X or CentOS 6.X"
             exit 255
         fi
@@ -89,8 +87,7 @@ func_accept_license() {
     # echo ""
     # read ACCEPT
 
-    # while [ "$ACCEPT" != "yes" ]  && [ "$ACCEPT" != "Yes" ] && [ "$ACCEPT" != "YES" ]  && [ "$ACCEPT" != "no" ]  && [ "$ACCEPT" != "No" ]  && [ "$ACCEPT" !
-= "NO" ]; do
+    # while [ "$ACCEPT" != "yes" ]  && [ "$ACCEPT" != "Yes" ] && [ "$ACCEPT" != "YES" ]  && [ "$ACCEPT" != "no" ]  && [ "$ACCEPT" != "No" ]  && [ "$ACCEPT" != "NO" ]; do
     #     echo "I agree to be bound by the terms of the license - [YES/NO]"
     #     read ACCEPT
     # done
@@ -256,8 +253,7 @@ func_install_dependencies(){
             yum -y --enablerepo=epel install npm
 
             #Audio File Conversion
-            yum -y --enablerepo=rpmforge install sox sox-devel ffmpeg ffmpeg-devel mpg123 mpg123-devel libmad libmad-devel libid3tag libid3tag-devel lame lam
-e-devel flac-devel libvorbis-devel
+            yum -y --enablerepo=rpmforge install sox sox-devel ffmpeg ffmpeg-devel mpg123 mpg123-devel libmad libmad-devel libid3tag libid3tag-devel lame lame-devel flac-devel libvorbis-devel
             cd /usr/src/
 
             #Install SOX for MP3 support
