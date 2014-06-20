@@ -107,7 +107,8 @@ func_install_fs_sources() {
     rm -rf freeswitch
     # dont use depth :  --depth=1 as we wont be able to checkout
     wget http://www.kazoo.com.cn/freeswitch/freeswitch.tar.gz
-    tar -xvzf freeswitch.tar.gz -C $FS_BASE_PATH
+    mkdir -p /usr/src/freeswitch
+    tar -xvzf freeswitch.tar.gz -C /usr/src/freeswitch
     #git clone git://git.freeswitch.org/freeswitch.git
     cd $FS_BASE_PATH/freeswitch
 
