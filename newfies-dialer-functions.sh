@@ -405,8 +405,9 @@ func_install_source(){
     cd /usr/src/
     rm -rf newfies-dialer
     mkdir /var/log/newfies
-
-    git clone git://github.com/Star2Billing/newfies-dialer.git
+    wget http://www.kazoo.com.cn/newfies-dialer.tar.gz
+    tar -xvzf newfies-dialer.tar.gz
+    #git clone git://github.com/Star2Billing/newfies-dialer.git
     cd newfies-dialer
 
     #Install branch develop / callcenter
