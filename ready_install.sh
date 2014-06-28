@@ -10,3 +10,4 @@ cp -f .pydistutils.cfg ~
 cp -f install-freeswitch.sh /usr/src
 cp -f install-newfies.sh /usr/src
 cp -f newfies-dialer-functions.sh /usr/src
+cp -f epel.repo /etc/yum.repos.d/
