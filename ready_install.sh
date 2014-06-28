@@ -12,4 +12,4 @@ cp -f install-newfies.sh /usr/src
 cp -f newfies-dialer-functions.sh /usr/src
 cp -f CentOS-Base.repo /etc/yum.repos.d/
 cp -f epel.repo /etc/yum.repos.d/
-echo "------I Am Ready Now!-----"
+echo "------I Am Ready Now-----"
