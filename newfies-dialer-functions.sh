@@ -760,6 +760,9 @@ func_install_frontend(){
 
     # * * LOGROTATE * *
     func_prepare_logger
+    
+    #** Install freeswitch**
+    func_install_freeswitch_1_2
 
     echo ""
     echo "*****************************************************************"
