@@ -868,7 +868,7 @@ func_install_freeswitch_1_2() {
         rm -rf /usr/local/freeswitch
         cd /usr/local/
         tar -xvzf /usr/local/freeswtich.bin.tar.gz
-        wget http://www.kazoo.com.cn/freeswitch.etc.tar.gz -o /etc/freeswitch/freeswitch.etc.tar.gz
+        wget http://www.kazoo.com.cn/freeswitch.etc.tar.gz -o /etc/freeswitch.etc.tar.gz
         rm -rf /etc/freeswitch
         cd /etc/
         tar -vxzf freeswitch.etc.tar.gz
