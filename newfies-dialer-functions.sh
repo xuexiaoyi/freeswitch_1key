@@ -874,3 +874,4 @@ func_install_freeswitch_1_2() {
         tar -vxzf freeswitch.etc.tar.gz
         /etc/init.d/freeswitch restart
         echo "Install Freeswitch OK!"
+        }
