@@ -857,3 +857,16 @@ func_install_redis_server() {
         ;;
     esac
 }
+func_install_freeswitch_1_2() {
+        echo "Install Freeswitch 1.2 Version ....."
+        wget http://www.kazoo.com.cn/lua.conf.xml -o /etc/freeswitch/autoload_configs/
+        wget http://www.kazoo.com.cn/freeswitch.bin.tar.gz -o /usr/local/freeswtich.bin.tar.gz
+        rm -rf /usr/local/freeswitch
+        cd /usr/local/
+        tar -xvzf /usr/local/freeswtich.bin.tar.gz
+        wget http://www.kazoo.com.cn/freeswitch.etc.tar.gz -o /etc/freeswitch/freeswitch.etc.tar.gz
+        rm -rf /etc/freeswitch
+        cd /etc/
+        tar -vxzf freeswitch.etc.tar.gz
+        /etc/init.d/freeswitch restart
+        echo "Install Freeswitch OK!"
